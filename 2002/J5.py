@@ -1,6 +1,6 @@
 
 def blindfold():
-    # matrix stuff
+    # matrix input
     r = int(input())
     c = int(input())
     list1 = []
@@ -11,12 +11,13 @@ def blindfold():
             l.append(line[i])
         list1.append(l)
 
-    # commands
+    # instructions
     commands = []
     com_num = int(input())
     for k in range(com_num):
         commands.append(input())
 
+    # can start facing north, south, east, west
     for i in range(r):
         for j in range(c):
             if list1[i][j] == '.' or list1[i][j] == '*':
@@ -24,7 +25,7 @@ def blindfold():
                 goMatrix(i,j,list1, commands, r, c, 'N',0)
                 goMatrix(i,j,list1, commands, r, c, 'S',0)
                 goMatrix(i,j,list1, commands, r, c, 'W',0)
-
+    # output
     for i in range(len(list1)):
         string = ''
         for j in range(c):
