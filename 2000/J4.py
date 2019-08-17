@@ -23,6 +23,7 @@ def brooks():
     #print(riv_lst)
     k = 0
     while k < len(riv_lst):
+        # splitting rivers
         if riv_lst[k]==99:
             #print(init_lst, riv_lst)
             #print(init_lst[riv_lst[k+1]-1], (riv_lst[k+2])*0.01)
@@ -34,6 +35,7 @@ def brooks():
             init_lst[riv_lst[k+1]-1] = b
             init_lst.insert(riv_lst[k+1]-1,a)
             k += 3
+        # joining rivers
         elif riv_lst[k]==88:
             #print(init_lst, riv_lst, riv_lst[k+1]-1, riv_lst[k+1])
             s = init_lst[riv_lst[k+1]-1] + init_lst[riv_lst[k+1]]
